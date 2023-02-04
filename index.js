@@ -12,3 +12,6 @@ const sequelize = new Sequelize(process.env.DATABASE_URL);
 const twilioRouter = require("./routes/Twilio");
 app.use("/twilio", twilioRouter);
 
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});

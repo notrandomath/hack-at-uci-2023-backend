@@ -12,6 +12,9 @@ const sequelize = new Sequelize(process.env.DATABASE_URL);
 const twilioRouter = require("./routes/Twilio");
 app.use("/twilio", twilioRouter);
 
+const cockroachdbRouter = require("./routes/Cockroach");
+app.use("/cockroachDB", cockroachdbRouter);
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
